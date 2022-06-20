@@ -4,9 +4,9 @@
   "description": "minimal reproduction of an nyc+instanbul spawn-wrap bug",
   "main": "index.js",
   "scripts": {
+    "test": "nyc npm run x",
     "x": "npm -s run x:inner",
-    "x:inner": "npm run x:inner:inner",
-    "x:inner:inner": "echo 5"
+    "x:inner": "echo 5"
   },
   "author": "",
   "license": "ISC",
