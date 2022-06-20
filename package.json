@@ -1,0 +1,19 @@
+{
+  "name": "nyc-nested-npm",
+  "version": "1.0.0",
+  "description": "minimal reproduction of an nyc+instanbul spawn-wrap bug",
+  "main": "index.js",
+  "scripts": {
+    "x": "npm -s run x:inner",
+    "x:inner": "npm run x:inner:inner",
+    "x:inner:inner": "echo 5"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nyc": "^15.1.0",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.4"
+  }
+}
